@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<actions>
+    <action>
+        <actionName>run</actionName>
+        <packagings>
+            <packaging>jar</packaging>
+        </packagings>
+        <goals>
+            <goal>package</goal>
+            <goal>bck2brwsr:show</goal>
+        </goals>
+        <properties>
+            <skipTests>true</skipTests>
+        </properties>
+    </action>
+    <action>
+        <actionName>debug</actionName>
+        <packagings>
+            <packaging>jar</packaging>
+        </packagings>
+        <goals>
+            <goal>package</goal>
+            <goal>bck2brwsr:show</goal>
+        </goals>
+        <properties>
+            <skipTests>true</skipTests>
+            <bck2brwsr.obfuscationlevel>NONE</bck2brwsr.obfuscationlevel>
+            <jpda.listen>maven</jpda.listen>
+        </properties>
+    </action>
+    <action>
+        <actionName>CUSTOM-bck2brwsr-show</actionName>
+        <displayName>Run in a Browser</displayName>
+        <goals>
+            <goal>package</goal>
+            <goal>bck2brwsr:show</goal>
+        </goals>
+        <properties>
+            <skipTests>true</skipTests>
+            <bck2brwsr.obfuscationlevel>NONE</bck2brwsr.obfuscationlevel>
+        </properties>
+    </action>
+    <action>
+        <actionName>CUSTOM-bck2brwsr-web</actionName>
+        <displayName>Package for website</displayName>
+        <goals>
+            <goal>clean</goal>
+            <goal>package</goal>
+        </goals>
+        <properties>
+            <skipTests>true</skipTests>
+        </properties>
+    </action>
+    <action>
+        <actionName>CUSTOM-teavm-show</actionName>
+        <displayName>Run in a Browser via TeaVM</displayName>
+        <goals>
+            <goal>package</goal>
+            <goal>bck2brwsr:show</goal>
+        </goals>
+        <activatedProfiles>
+            <activatedProfile>teavm</activatedProfile>
+        </activatedProfiles>
+        <properties>
+            <skipTests>true</skipTests>
+        </properties>
+    </action>
+    <action>
+        <actionName>CUSTOM-teavm-show</actionName>
+        <displayName>Debug in a Browser via TeaVM</displayName>
+        <goals>
+            <goal>package</goal>
+            <goal>bck2brwsr:show</goal>
+        </goals>
+        <activatedProfiles>
+            <activatedProfile>teavm</activatedProfile>
+        </activatedProfiles>
+        <properties>
+            <skipTests>true</skipTests>
+            <teavm.debug>true</teavm.debug>
+        </properties>
+    </action>
+    <action>
+        <actionName>CUSTOM-teavm-web</actionName>
+        <displayName>Package for website via TeaVM</displayName>
+        <goals>
+            <goal>clean</goal>
+            <goal>package</goal>
+        </goals>
+        <properties>
+            <skipTests>true</skipTests>
+        </properties>
+        <activatedProfiles>
+            <activatedProfile>teavm</activatedProfile>
+        </activatedProfiles>
+    </action>
+</actions>
