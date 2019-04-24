@@ -22,7 +22,7 @@
         <browser.bootstrap>initialize bck2brwsr --&gt;
 &lt;script type="text/javascript" src="bck2brwsr.js"&gt;&lt;/script&gt;
 &lt;script&gt;
-    var vm = bck2brwsr('bck2brwsr.js');
+    var vm = bck2brwsr('bck2brwsr-web.js');
     var c = vm.loadClass('com.athaydes.BrowserMain');
     c.invoke('main');
 &lt;/script&gt;
@@ -87,7 +87,7 @@
                     <directory>${project.build.directory}/${project.build.finalName}-bck2brwsr/public_html/</directory>
                     <startpage>index.html</startpage>
                     <classPathPrefix>lib</classPathPrefix>
-                    <mainJavaScript>${project.build.directory}/bck2brwsr.js</mainJavaScript>
+                    <mainJavaScript>${project.build.directory}/bck2brwsr-web.js</mainJavaScript>
                     <exports>
                         <export>${project.mainclass}</export>
                     </exports>
